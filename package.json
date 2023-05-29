@@ -23,6 +23,7 @@
     "test:backend": "cross-env NODE_ENV=test jest tests/ --verbose --runInBand --forceExit",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:front": "react-scripts test src --watchAll=false",
     "eject": "react-scripts eject",
     "cypress:open": "cypress open",
     "test:e2e": "cypress run"

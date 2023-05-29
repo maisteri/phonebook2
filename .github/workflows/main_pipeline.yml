@@ -22,3 +22,7 @@ jobs:
         run: npm run lint
       - name: build
         run: npm run build
+      - name: test front
+        run: npm run test:front
+      - name: test backend
+        run: npm run test:backend

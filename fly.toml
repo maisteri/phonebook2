@@ -1,0 +1,14 @@
+# fly.toml app configuration file generated for green-surf-316 on 2023-05-29T09:04:54+03:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "green-surf-316"
+primary_region = "arn"
+
+[http_service]
+  internal_port = 3003
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0

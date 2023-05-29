@@ -11,9 +11,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: secrets
-        run: echo "$secrets"
+        env:
+          SECRETS: ${{ toJson(secrets) }}
+        run: echo "$SECRETS"
       - name: variables
-        run: echo "$variables"
+        env:
+          VARIABLES: ${{ toJson(vars) }}
+        run: echo "$VARIABLES"
       - name: github context
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}

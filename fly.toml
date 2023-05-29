@@ -6,6 +6,9 @@
 app = "green-surf-316"
 primary_region = "arn"
 
+[env]
+  PORT = 3003
+
 [http_service]
   internal_port = 3003
   force_https = true

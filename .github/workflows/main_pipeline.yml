@@ -25,4 +25,10 @@ jobs:
       - name: test front
         run: npm run test:front
       - name: test backend
+        env:
+          MONGODB_URI: ${{secrets.MONGODB_URI}}
+          TEST_MONGODB_URI: ${{secrets.TEST_MONGODB_URI}}
+          PORT: ${{vars.PORT}}
+          SECRET: ${{secrets.SECRET}}
+          NODE_ENV: 'test'
         run: npm run test:backend
